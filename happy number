@@ -1,0 +1,13 @@
+def happy(n):
+    if n<=9:
+        return n==1 or n==7
+    s=0
+    while(n):
+        dig=n%10
+        s+=(dig**2)
+        n=n//10
+    return happy(s)
+
+n=int(input())
+res=happy(n)
+print(res)
